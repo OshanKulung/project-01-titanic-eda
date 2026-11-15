@@ -20,8 +20,9 @@ Which passenger characteristics (age, sex, class, fare) had the strongest impact
 ## Machine Learning Baseline
 After completing the EDA, I built a baseline predictive model. 
 - **Features Used:** Pclass, Age, SibSp, Parch, Fare, Sex (One-Hot Encoded), Embarked (One-Hot Encoded).
-- **Model:** Logistic Regression.
-- **Result:** Achieved a **78.09% accuracy** and significantly improved recall for survivors by including the `Sex` feature.
+- **Model 1 (Logistic Regression):** Achieved a **78.09% accuracy**. This linear model performed very well because features like `Sex` have a strong linear relationship with survival.
+- **Model 2 (Random Forest):** Achieved a **76.97% accuracy**. It correctly identified 52 survivors and made 17 False Negatives. 
+- **Conclusion:** The simpler Logistic Regression slightly outperformed the Random Forest, likely due to the small size of the Titanic dataset.
 
 ## Project Structure
 - `data/`: Contains the raw Titanic dataset.
